@@ -1,7 +1,7 @@
 // weather.js
 async function getWeather() {
     const city = document.getElementById("city").value;
-    const response = await fetch(`/get_weather?city=${city}`);
+    const response = await fetch(`https://weatherwebapp-b8gxc6e5ckb7fzdn.canadacentral-01.azurewebsites.net/get_weather?city=${city}`);
     const result = await response.json();
 
     if (response.ok) {
@@ -14,3 +14,4 @@ async function getWeather() {
         document.getElementById("result").innerHTML = `<p>${result.error}</p>`;
     }
 }
+
